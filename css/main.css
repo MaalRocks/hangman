@@ -1,0 +1,79 @@
+/*
+    Modules Structure (for better reading):
+    1.  Visibility Options
+        1.1 Display
+        1.2 Flexbox Options
+        1.3 Position
+        1.4 Position Options (Top, Right, Bottom, Left)
+        1.5 z-index
+        1.6 Opacity
+    2.  Size Options
+        2.1 Width
+        2.2 Height
+        2.3 Padding
+        2.4 Margin
+    3.  Border Options
+        3.1 Border
+        3.2 Border-Radius
+    4.  Background Options
+        4.1 Background-Position
+        4.2 Background-Size
+        4.3 Background-Repeat
+        4.4 Background-Color
+    5.  Typography Options
+        5.1 Color
+        5.2 Font-Family
+        5.3 Font-Size
+        5.4 Line-Height
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #207020, #921592);
+}
+
+.game-screen {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(5, 120px);
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+}
+.game-screen div {
+  display: flex;
+  border: 1px solid white;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.game-screen .counter-output {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: rgba(255, 255, 255, 0.8);
+}
+.game-screen .answer-output {
+  font-size: 2rem;
+  background-color: #921592;
+  color: rgba(255, 255, 255, 0.75);
+}
+.game-screen .mistake-output {
+  background-color: aqua;
+}
+
+.span-rows-two {
+  grid-column: span 8;
+  grid-row: span 2;
+}
+
+.span-rows-one {
+  grid-column: span 8;
+}
+
+/*# sourceMappingURL=main.css.map */
